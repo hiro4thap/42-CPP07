@@ -21,6 +21,6 @@ private:
 	void		clear();
 };
 
-# include "Array.cpp"
+# include "Array.tpp"
 
 #endif

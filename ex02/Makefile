@@ -8,7 +8,7 @@ OBJ_DIR 	= obj/
 
 SRC			= main.cpp \
 			  Log.cpp \
-			  Array.cpp
+			  Array.tpp
 OBJ			= $(SRC:.cpp=.o)
 
 SRCS		= $(addprefix $(SRC_DIR), $(SRC))
