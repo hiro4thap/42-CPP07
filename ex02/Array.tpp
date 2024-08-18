@@ -1,5 +1,5 @@
-#ifndef ARRAY_CPP
-# define ARRAY_CPP
+#ifndef ARRAY_TPP
+# define ARRAY_TPP
 
 # include "Array.hpp"
 
@@ -47,7 +47,15 @@ Array<T>::Array(const unsigned int n):
 }
 		
 template<typename T>
-T &Array<T>::operator[](std::size_t index) const
+T &Array<T>::operator[](std::size_t index)
+{
+	if (_size <= index)
+		throw std::exception();
+	return _ptr[index];
+}
+
+template<typename T>
+T const &Array<T>::operator[](std::size_t index) const
 {
 	if (_size <= index)
 		throw std::exception();

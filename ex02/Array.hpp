@@ -12,7 +12,8 @@ public:
 	Array(const Array<T> &rhs);
 	Array &operator=(const Array &rhs);
 	Array(const unsigned int n);
-	T &operator[](std::size_t index) const;
+	T &operator[](std::size_t index);
+	T const &operator[](std::size_t index) const;
 	std::size_t	size() const;
 
 private:

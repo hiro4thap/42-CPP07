@@ -28,18 +28,18 @@ int main(int, char**)
             return 1;
         }
     }
-	Log::nl(" -> All the values are copied prorperly", YELLOW);
-
+	Log::nl(" -> All the values are copied prorperly");
 	Log::nl();
+
 	Log::nl("Change a value of original array", CYAN);
 	Log::out(" -> ");
 	numbers[0] += 1;
     if (mirror[0] == numbers[0] || tmp[0] == numbers[0] || test[0] == numbers[0])
 		Log::nl("The copy arrays are affected", YELLOW);
 	else
-		Log::nl("The copy arrays are not affected", YELLOW);
-
+		Log::nl("The copy arrays are not affected");
 	Log::nl();
+
 	Log::nl("Pass index as -2", CYAN);
     try
     {
@@ -48,9 +48,10 @@ int main(int, char**)
     catch(const std::exception& e)
     {
 		Log::out(" -> ");
-		Log::nl(e.what(), YELLOW);
+		Log::nl(e.what(), RED);
     }
 	Log::nl();
+
 	Log::nl("Pass index as MAX_VAL(= size of the array)", CYAN);
     try
     {
@@ -59,7 +60,7 @@ int main(int, char**)
     catch(const std::exception& e)
     {
 		Log::out(" -> ");
-		Log::nl(e.what(), YELLOW);
+		Log::nl(e.what(), RED);
     }
 
     for (int i = 0; i < MAX_VAL; i++)
